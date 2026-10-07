@@ -3,6 +3,7 @@ import { Menu, Twitch, Youtube, Instagram, Play, X } from 'lucide-react'
 import { useState } from 'react'
 
 import { navItems } from '@/data/siteData'
+import { TwitchConnectButton } from '@/components/twitch-connect-button'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -11,10 +12,10 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-md border border-red-500/50 bg-red-500/10 text-xs font-black text-red-500 shadow-glow">
+          <div className="flex h-10 w-10 items-center justify-center rounded-md border border-red-500/50 bg-red-500/10 text-xs font-black text-red-500 red-glow">
             IT
           </div>
-          <span className="font-display text-2xl tracking-tight text-white">ItsTomiTv</span>
+          <span className="font-black uppercase tracking-[-0.08em] text-xl text-white">ItsTomiTv</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -26,10 +27,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button className="hidden rounded-full border border-red-500 bg-red-600 px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:bg-red-500 md:inline-flex">
-            <Twitch className="mr-2 h-4 w-4" />
-            Ligar com a Twitch
-          </button>
+          <div className="hidden md:block">
+            <TwitchConnectButton />
+          </div>
 
           <button
             className="inline-flex rounded-full border border-white/10 bg-white/5 p-2 text-white md:hidden"
@@ -49,10 +49,9 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <button className="mt-2 inline-flex items-center justify-center rounded-full border border-red-500 bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-glow">
-              <Twitch className="mr-2 h-4 w-4" />
-              Ligar com a Twitch
-            </button>
+            <div className="mt-2">
+              <TwitchConnectButton />
+            </div>
           </div>
         </div>
       )}
