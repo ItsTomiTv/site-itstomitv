@@ -1,13 +1,19 @@
-/** @type {import('next').NextConfig} */
+next.config.js
+** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'static-cdn.jtvnw.net',
-      'twitch.tv',
-      'www.twitch.tv',
-    ],
-  },
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'static-cdn.jtvnw.net'
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig
