@@ -17,12 +17,12 @@ export const streamStatus = {
 }
 
 export const socialLinks = [
-  { name: 'Twitch', handle: 'ItsTomiTv', href: 'https://twitch.tv/ItsTomiTv', icon: 'twitch', accent: 'bg-[#9146ff]' },
+  { name: 'Twitch', handle: '@ItsTomiTv', href: 'https://twitch.tv/ItsTomiTv', icon: 'twitch', accent: 'bg-[#9146ff]' },
   { name: 'YouTube', handle: '@itstomi_tv', href: 'https://youtube.com/@itstomi_tv', icon: 'youtube', accent: 'bg-[#ff0000]' },
   { name: 'Instagram', handle: '@itstomitv', href: 'https://instagram.com/itstomitv', icon: 'instagram', accent: 'bg-[#e1306c]' },
   { name: 'TikTok', handle: '@itstomitv', href: 'https://tiktok.com/@itstomitv', icon: 'tiktok', accent: 'bg-[#000000]' },
   { name: 'X / Twitter', handle: '@ItsTomiTv', href: 'https://x.com/ItsTomiTv', icon: 'x', accent: 'bg-[#1d9bf0]' },
-  { name: 'Discord', handle: 'ItsTomiTv Community', href: 'https://discord.com', icon: 'discord', accent: 'bg-[#5865f2]' }
+  { name: 'Discord', handle: 'ItsTomiTv Community', href: 'https://discord.gg/itstomitv', icon: 'discord', accent: 'bg-[#5865f2]' }
 ]
 
 export const games = [
@@ -94,7 +94,7 @@ export const partners = [
 export const about = {
   name: 'ItsTomiTv',
   nickname: '@ItsTomiTv',
-  bio: 'Streamer, gamer e criador de conteúdo com foco em intensidade, competitividade e momentos autenticados no gaming.',
+  bio: 'Streamer, gamer e criador de conteúdo com foco em intensidade, competitividade e momentos autenticados no gaming. Passionado por comunidade e por criar experiências premium para os meus seguidores.',
   content: ['CS2', 'Valorant', 'Apex', 'Competitivo', 'Entretenimento'],
-  goals: 'Criar uma comunidade forte, conectar com fãs e construir uma presença premium no mundo gaming.'
+  goals: 'Criar uma comunidade forte, conectar com fãs de forma autêntica e construir uma presença premium no mundo gaming. O objetivo é evoluir constantemente como criador e oferecer sempre o melhor conteúdo.'
 }

@@ -1,5 +1,4 @@
-next.config.js
-** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -13,7 +12,8 @@ const nextConfig = {
         hostname: 'static-cdn.jtvnw.net'
       }
     ]
-  }
+  },
+  outputFileTracing: true
 }
 
 module.exports = nextConfig

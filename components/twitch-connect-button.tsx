@@ -18,8 +18,8 @@ export function TwitchConnectButton() {
         onClick={() => (!connected ? setConnected(true) : setOpen((v) => !v))}
         className={`inline-flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold transition md:px-5 ${
           connected
-            ? 'border border-green-500/60 bg-green-600/15 text-green-300 shadow-[0_0_22px_rgba(34,197,94,0.45)]'
-            : 'border border-red-500/70 bg-red-600 text-white shadow-glow hover:bg-red-500'
+            ? 'border border-green-500/60 bg-green-600/15 text-green-300 shadow-[0_0_20px_rgba(34,197,94,0.4)]'
+            : 'border border-red-500/70 bg-red-600 text-white red-glow hover:bg-red-500'
         }`}
       >
         {connected ? (
@@ -39,9 +39,9 @@ export function TwitchConnectButton() {
       </button>
 
       {connected && open && (
-        <div className="absolute right-0 mt-3 w-52 rounded-2xl border border-white/10 bg-[#111111]/95 p-2 shadow-card">
-          <div className="mb-2 flex items-center gap-3 rounded-xl bg-white/5 p-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-red-500/20 text-xs font-bold text-red-300">
+        <div className="absolute right-0 mt-3 w-52 rounded-2xl border border-white/10 bg-[#111111]/95 p-2 shadow-card backdrop-blur-sm">
+          <div className="mb-2 flex items-center gap-3 rounded-xl bg-white/5 p-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/20 text-xs font-bold text-red-300">
               {user.avatar}
             </div>
             <div>
@@ -50,15 +50,15 @@ export function TwitchConnectButton() {
             </div>
           </div>
 
-          <button className="flex w-full items-center gap-2 rounded-lg px-2 py-2 text-left text-sm text-white/80 hover:bg-white/5">
+          <button className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm text-white/80 transition hover:bg-white/5">
             <User className="h-4 w-4" />
             Perfil Twitch
           </button>
-          <button className="flex w-full items-center gap-2 rounded-lg px-2 py-2 text-left text-sm text-white/80 hover:bg-white/5">
+          <button className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm text-white/80 transition hover:bg-white/5">
             <Twitch className="h-4 w-4" />
-            Nome de utilizador
+            Canal
           </button>
-          <button className="flex w-full items-center gap-2 rounded-lg px-2 py-2 text-left text-sm text-red-300 hover:bg-white/5" onClick={() => { setConnected(false); setOpen(false) }}>
+          <button className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm text-red-300 transition hover:bg-white/5" onClick={() => { setConnected(false); setOpen(false) }}>
             <LogOut className="h-4 w-4" />
             Desligar conta
           </button>
